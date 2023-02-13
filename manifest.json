@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "NearestRDV",
+    "description": "Find the closest RDV available in clic santé.",
+    "version": "1.0",
+    "icons": {
+      "16": "images/icon_16.png",
+      "32": "images/icon_32.png",
+      "128": "images/icon_128.png"
+    },
+    "web_accessible_resources": [{
+        "resources": ["script.js"],
+        "matches": ["<all_urls>"]
+      }],
+    "content_scripts": [
+      {
+        "js": [
+          "content.js"
+        ],
+        "matches": [
+          "https://portal3.clicsante.ca/*",
+          "https://clients3.clicsante.ca/*"
+        ]
+      }
+    ]
+  }
