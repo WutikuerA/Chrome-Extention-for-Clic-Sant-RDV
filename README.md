@@ -1,3 +1,5 @@
+Find the soonest RDV available in the website of clic santé , currently only avaible for blood test. This will save you the time from entering into each lab, click the quesion form and finally see the available date then compare them. It will show you the soonest date in the current list and the corresponding clinic name. In future verion I will try to add a button which will allow user to navigate to the selected clinic from the list.
+
 # How to use it?
 1. Install it to your chrome: comming soon...
 2. Go to **[clic santé website](https://portal3.clicsante.ca/)**.
