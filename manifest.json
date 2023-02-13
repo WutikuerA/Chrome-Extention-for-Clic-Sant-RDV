@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "NearestRDV",
-    "description": "Find the closest RDV available in clic santé.",
-    "version": "1.0",
+    "name": "SoonestRDV",
+    "description": "Find the soonest RDV available in the website of clic santé , currently only avaible for blood test. This will save you the time from entering into each lab, click the quesion form and finally see the available date then compare them. It will show you the soonest date and the corresponding clinic name, in future verion I will try to add a button which will ",
+    "version": "1.1",
     "icons": {
       "16": "images/icon_16.png",
       "32": "images/icon_32.png",
