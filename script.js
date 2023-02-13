@@ -6,6 +6,7 @@
  const LOADING_TEXT = "Loading...";
  var soonestDate = LOADING_TEXT;
  var soonestPlace = LOADING_TEXT;
+ var initialText = '...';
  var bloodTestServiceId;
  console.log("Entered SoonestRDV extention!");
 
@@ -50,6 +51,7 @@ observer.observe(document, {
         document.getElementById("soonest-date").innerHTML = LOADING_TEXT;
         document.getElementById("soonest-place").innerHTML = LOADING_TEXT;
         console.log(`Found ${jsonResponse.places.length} establishement`);
+
         for(const place of jsonResponse.places)
         {
             // Get the soonest RDV among the current reponse body
@@ -193,7 +195,6 @@ function renderInfoPanel() {
     infoPanel.style.zIndex = '9999';
     infoPanel.style.fontFamily = 'sans-serif';    
     infoPanel.style.color = 'white';
-    // infoPanel.textContent = 'Soonest RDV found on: ' + soonestDate + '\n' + 'at: ' + soonestPlace;
     document.body.appendChild( infoPanel );
 
     // Panel
@@ -205,7 +206,8 @@ function renderInfoPanel() {
     var panelTitle = document.createElement( 'div' );
     panelTitle.style.marginTop = '10px';
     panelTitle.textContent = "Soonest RDV for blood test:";  
-    panelTitle.style.fontWeight = 'bold';
+    panelTitle.style.fontWeight = 'bold';    
+    panelTitle.style.borderBottom = '1px solid white';
     infoPanel.appendChild( panelTitle );
 
     var dateSpan = document.createElement( 'div' );    
@@ -219,14 +221,14 @@ function renderInfoPanel() {
 
     var dateSpan = document.createElement( 'div' );    
     dateSpan.id = "soonest-date";
-    dateSpan.textContent = soonestDate;
+    dateSpan.textContent = initialText;
     dateSpan.style.textAlign = 'left';
     dateSpan.style.marginTop = '15px';
     infoPanel.appendChild( dateSpan );
 
     var palceSpan = document.createElement( 'div' );
     palceSpan.id = "soonest-place";
-    palceSpan.textContent = soonestPlace;
+    palceSpan.textContent = initialText;
     palceSpan.style.marginTop = '15px';
     palceSpan.style.textAlign = 'left';
     infoPanel.appendChild( palceSpan );
